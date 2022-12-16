@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='web.css') }}"/>
+
+</head>
+<body>
+
+<div>
+
+
+<div class="sidenav"> 
+  <a href="{{url_for('service', type='CH4')}}">Maps</a>
+  <a href="{{url_for('service2')}}">histogram</a>
+  <a href="{{url_for('hello', type='PM 10')}}">pieChart</a>
+
+  <button class="dropdown-btn">Dropdown 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+  <a href="/services">Search</a>
+</div>
+
+<div class="main">
+  <h2>Sidebar Dropdown</h2>
+  <p>Some random text.. The next example will show you how to make the dropdown link functional.</p>
+  <p>This sidebar is of full height (100%) and always shown.</p>
+  <p>Some random text..</p>
+</div>
+
+</div>
+</body>
+</html> 
