@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='web.css') }}"/>
+
+</head>
+<html>
+<body>
+
+<h1>{{Pollutant}}</h1>
+<h1>Select Year</h1>
+
+<p>Select the year for which you want to create pie chart. </p>
+
+<form action = "{{url_for('timeSeries')}}" method = "post">
+
+
+  <label for="sector">Sector:</label>
+  <select name="sector" id="sector">
+	{% for value in sector %}
+	<option value="{{value}}">{{value}}</option>
+	{% endfor %}
+  </select>
+  <br><br>
+  <label for="pollutant">Pollutant:</label>
+    <select name="pollutant" id="pollutant">
+	{% for value in pollutant %}
+	<option value="{{value}}">{{value}}</option>
+	{% endfor %}
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<p>Click the "Submit" button and the form-data will be sent to a page on the 
+server called "action_page.php".</p>
+
+</body>
+</html>
